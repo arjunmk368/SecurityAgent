@@ -1,0 +1,25 @@
+{#{% load static %}#}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <a href="{% url 'Homepage:index' %}">Home</a>
+    <a href="{% url 'Homepage:result' %}">Result</a>
+</div>
+<h1>HomesecurityAgent</h1>
+{% if object_list %}
+    {% for i in object_list %}
+        <p>{{ i.Name_of_the_User }}</p>
+    {% endfor %}
+{% else %}
+    <p>You have Nothing Here</p>
+{% endif %}
+</body>
+</html>

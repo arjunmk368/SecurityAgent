@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Security Agent</title>
+    {#    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}" />#}
+    <link rel="stylesheet" href="{% static 'Homepage/css/in.css' %}">
+    <style>
+        h1 {
+            color: red;
+            font-size: 45px;
+        }
+
+        body {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <a href="{% url 'Homepage:index' %}">Home</a>
+    <a href="{% url 'Homepage:result' %}">Result</a>
+    <a href="{% url 'Homepage:stream' %}">Stream</a>
+</div>
+<h1>HomesecurityAgent</h1>
+<h2>Welcome {{ Query_response.Name_of_the_User }}</h2>
+</body>
+</html>
+<iframe
+        allow="microphone;"
+        width="350"
+        height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/24a3e46c-5387-411a-9614-a45b3992d36b">
+</iframe>
+
